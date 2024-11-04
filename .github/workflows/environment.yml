@@ -19,11 +19,13 @@ jobs:
         run: echo ${{ vars.MY_REPO_VAR }}
 
       - name: Show environment secret
+        if: $ENV_SECRET == 'env_secret'
         run: |
           echo ${{ secrets.MY_ENV_SECRET }}
-          echo $ENV_SECRET
+          echo 'env_secret
 
       - name: Show repo secret
+        if: $REPO_SECRET == 'repo_secret'
         run: |
           echo ${{ secrets.MY_REPO_SECRET }}
-          echo $REPO_SECRET
+          echo 'repo_secret'
