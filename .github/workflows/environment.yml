@@ -5,11 +5,12 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - uses: actions/checkout@v4.2.2
 
       - name: Show environment variable
-        run: echo "$MY_ENV_VAR"
+        run: echo $MY_ENV_VAR
 
       - name: Show repo variable
         run: echo ${{ vars.MY_REPO_VAR }}
