@@ -1,0 +1,15 @@
+name: Environment workflow
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Show environment variable
+        run: echo ${{ env.MY_ENV_VAR }}
+
+      - name: Show repo variable
+        run: echo ${{ env.MY_REPO_VAR }}
