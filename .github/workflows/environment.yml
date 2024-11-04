@@ -14,3 +14,9 @@ jobs:
 
       - name: Show repo variable
         run: echo ${{ vars.MY_REPO_VAR }}
+
+      - name: Show environment secret
+        run: echo ${{ secrets.MY_ENV_SECRET }}
+
+      - name: Show repo secret
+        run: echo ${{ secrets.MY_REPO_SECRET }}
