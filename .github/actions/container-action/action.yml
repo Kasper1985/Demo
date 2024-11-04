@@ -1,0 +1,17 @@
+name: 'Container action'
+description: 'Get started with container actions'
+
+inputs:
+  name:
+    description: 'Who to greet'
+    default: 'world'
+
+outputs:
+  time:
+    description: 'Greetings time'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.name }}
