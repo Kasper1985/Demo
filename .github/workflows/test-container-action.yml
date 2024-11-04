@@ -1,0 +1,16 @@
+name: Test Action
+
+on: [workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run my own container action
+        id: greeting-action
+        uses: Kasper1985/greetings-action
+        with:
+          name: ${{ github.actor }}
+
+      - name: Output time set in the container
+        run: echo "The time in the container was ${{ steps.greeting-action.outputs.time }}"
