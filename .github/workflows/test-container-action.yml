@@ -6,6 +6,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4.2.2
+    
       - name: Run my own container action
         id: greeting-action
         uses: ./action
