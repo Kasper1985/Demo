@@ -22,10 +22,10 @@ jobs:
         if: ${{ env.ENV_SECRET == 'env_secret' }}
         run: |
           echo ${{ secrets.MY_ENV_SECRET }}
-          echo 'env_secret'
+          echo 'My environment secret is: env_secret'
 
       - name: Show repo secret
         if: ${{ env.REPO_SECRET == 'repo_secret' }}
         run: |
           echo ${{ secrets.MY_REPO_SECRET }}
-          echo 'repo_secret'
+          echo 'My repo secret is: repo_secret'
