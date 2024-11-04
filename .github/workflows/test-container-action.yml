@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Run my own container action
         id: greeting-action
-        uses: Kasper1985/greetings-action
+        uses: Kasper1985/greetings-action@main
         with:
           name: ${{ github.actor }}
 
