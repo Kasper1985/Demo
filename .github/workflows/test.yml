@@ -1,0 +1,19 @@
+# Demo workflow
+name: Demo Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ununtu-latest
+
+    steps:
+      - name: Checkout
+        uses: action/checkout@v4
+
+      - name: Print string
+        run: echo 'Hello world!'
+  
